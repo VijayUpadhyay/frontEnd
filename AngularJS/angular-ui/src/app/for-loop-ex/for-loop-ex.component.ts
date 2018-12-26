@@ -6,8 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./for-loop-ex.component.css']
 })
 export class ForLoopExComponent implements OnInit {
-
-  constructor() { }
+  user: any;
+  constructor() {
+    this.user = {
+      name: 'User_Name',
+      title: 'SE',
+      phone: [
+        '1234',
+        '5678',
+        '1122'
+      ]
+    };
+  }
 
   ngOnInit() {
   }

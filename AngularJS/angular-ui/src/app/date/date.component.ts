@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { getLocaleDateTimeFormat } from '@angular/common';
 
 @Component({
   selector: 'app-date',
@@ -8,16 +7,15 @@ import { getLocaleDateTimeFormat } from '@angular/common';
 })
 export class DateComponent implements OnInit {
   dateMsg: string;
-//  date: Date = new Date();
-//  todayDate = this.date.toDateString();
-// todayTime = this.date.toLocaleTimeString();
+  //  date: Date = new Date();
+  //  todayDate = this.date.toDateString();
+  // todayTime = this.date.toLocaleTimeString();
   constructor() {
-setInterval(() => {
-let currentDate = new Date();
-this.dateMsg = currentDate.toDateString() + ' ' + currentDate.toLocaleTimeString();
-}, 1000);
-
-   }
+    setInterval(() => {
+      const currentDate = new Date();
+      this.dateMsg = currentDate.toDateString() + ' ' + currentDate.toLocaleTimeString();
+    }, 1000);
+  }
 
   ngOnInit() {
   }
